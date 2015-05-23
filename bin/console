@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "librato/memcached"
+
+require "irb"
+IRB.start

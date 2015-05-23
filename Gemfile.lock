@@ -1,0 +1,35 @@
+PATH
+  remote: .
+  specs:
+    librato-memcached (0.1.0)
+      dalli (~> 2.7.4)
+      kgio (~> 2.9.3)
+      librato-metrics (~> 1.5.0)
+      oj (~> 2.12.8)
+      trollop (~> 2.1.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aggregate (0.2.2)
+    dalli (2.7.4)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    kgio (2.9.3)
+    librato-metrics (1.5.0)
+      aggregate (~> 0.2.2)
+      faraday (~> 0.7)
+      multi_json
+    multi_json (1.11.0)
+    multipart-post (2.0.0)
+    oj (2.12.8)
+    rake (10.4.2)
+    trollop (2.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.9)
+  librato-memcached!
+  rake (~> 10.0)
