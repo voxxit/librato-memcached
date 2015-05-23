@@ -5,8 +5,6 @@ PATH
       dalli (~> 2.7.4)
       kgio (~> 2.9.3)
       librato-metrics (~> 1.5.0)
-      oj (~> 2.12.8)
-      trollop (~> 2.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -22,9 +20,7 @@ GEM
       multi_json
     multi_json (1.11.0)
     multipart-post (2.0.0)
-    oj (2.12.8)
     rake (10.4.2)
-    trollop (2.1.2)
 
 PLATFORMS
   ruby
