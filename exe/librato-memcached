@@ -1,17 +1,29 @@
 #!/usr/bin/env ruby
+require "logger"
+
 require "bundler/setup"
 require "librato/memcached"
 
-Librato::Metrics.authenticate ENV["LIBRATO_EMAIL"], ENV["LIBRATO_TOKEN"]
+logger = Logger.new(STDOUT)
 
+email = ENV["LIBRATO_EMAIL"]
+token = ENV["LIBRATO_TOKEN"]
+
+logger.info "Authenticating with email: #{email}"
+logger.info "Authenticating with API token: #{token}"
+
+Librato::Metrics.authenticate(email, token)
+
+logger.info "Creating metrics queue"
 queue = Librato::Metrics::Queue.new
 
 loop do
+  logger.info "Starting metrics collection..."
   # collect and queue metrics
   Librato::Memcached.collect!(queue)
 
   begin
-    # submit to Librato
+    logger.info "Submitting metrics to Librato!"
     queue.submit
   rescue Exception => e
     $stderr.puts e
