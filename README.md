@@ -21,13 +21,13 @@ Or install it yourself as:
 Submitting metrics is quite easy:
 
 ```shell
-$ export MEMCACHED_SERVERS="localhost:11211,10.0.0.1:11212,..."
+$ export MEMCACHE_SERVERS="localhost:11211,10.0.0.1:11212,..."
 $ export LIBRATO_EMAIL="user@example.com"
 $ export LIBRATO_TOKEN="..."
 $ librato-memcached
 ```
 
-And you're done!
+And you're done! `librato-memcached` will keep submitting metrics every 60 seconds until you quit the process.
 
 ## Development
 
