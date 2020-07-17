@@ -2,25 +2,25 @@ PATH
   remote: .
   specs:
     librato-memcached (0.1.0)
-      dalli (~> 2.7.4)
-      kgio (~> 2.9.3)
-      librato-metrics (~> 1.5.0)
+      dalli (~> 2.7, >= 2.7.4)
+      kgio (~> 2.9, >= 2.9.3)
+      librato-metrics (~> 1.5, >= 1.5.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     aggregate (0.2.2)
-    dalli (2.7.4)
-    faraday (0.9.1)
+    dalli (2.7.10)
+    faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
-    kgio (2.9.3)
-    librato-metrics (1.5.0)
+    kgio (2.11.3)
+    librato-metrics (1.6.1)
       aggregate (~> 0.2.2)
       faraday (~> 0.7)
       multi_json
-    multi_json (1.11.0)
-    multipart-post (2.0.0)
-    rake (10.4.2)
+    multi_json (1.15.0)
+    multipart-post (2.1.1)
+    rake (13.0.1)
 
 PLATFORMS
   ruby
@@ -28,4 +28,4 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.9)
   librato-memcached!
-  rake (~> 10.0)
+  rake (~> 13.0)
